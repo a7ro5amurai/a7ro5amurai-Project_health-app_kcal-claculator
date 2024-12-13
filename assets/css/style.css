@@ -521,7 +521,7 @@ header section{
         grid-template-columns: 1fr;
     }
     .planSize{
-        height: 10vh;
+        height: 15vh;
     }
 
     /* !footer */

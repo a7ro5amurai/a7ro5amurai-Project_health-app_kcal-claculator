@@ -19,8 +19,11 @@ function calc() {
         BMRateKjOutput = 4.2 * BMRateWoman;
     }
 
-    document.querySelector(".Grundumsatz").innerText = BMRateOutput;
-    document.querySelector(".Umrechnung").innerText = BMRateKjOutput;
+    let gerundetOutputRate = Math.round(BMRateOutput);
+    let gerundetOutputRateKj = Math.round(BMRateKjOutput);
+
+    document.querySelector(".Grundumsatz").innerText = gerundetOutputRate;
+    document.querySelector(".Umrechnung").innerText = gerundetOutputRateKj;
 
     let activityLevel = document.querySelector("#activity").value;
 
@@ -47,8 +50,11 @@ function calc() {
         dailyEnergyOutputKj = 2.2 * BMRateKjOutput;
     }
     
-    document.querySelector(".Total").innerText = dailyEnergyOutput;
-    document.querySelector(".TotalUmrechnung").innerText = dailyEnergyOutputKj;
+    let gerundetOutput = Math.round(dailyEnergyOutput);
+    let gerundetOutputKj = Math.round(dailyEnergyOutputKj);
+
+    document.querySelector(".Total").innerText = gerundetOutput;
+    document.querySelector(".TotalUmrechnung").innerText = gerundetOutputKj;
 }
 
 function monthlyYearly() {
@@ -78,5 +84,5 @@ function appearDropdownMenu() {
     } else {
         dropDownMenu.classList.add('visible');
     }
-}
+} 
 
